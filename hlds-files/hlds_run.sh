@@ -28,6 +28,9 @@ SERVER_NAME="${SERVER_NAME:-Counter-Strike 1.6 Server}"
 START_MONEY="${START_MONEY:-800}"
 BUY_TIME="${BUY_TIME:-0.25}"
 FRIENDLY_FIRE="${FRIENDLY_FIRE:-1}"
+BOT_QOUTA="${BOT_QOUTA:-15}" 
+BOT_ADD="${BOR_ADD:-10}"
+BOT_DIFFICULTY="${BOT_DIFFICULTY:-2}"
 
 OPTIONS="-game ${GAME}\
  +maxplayers ${MAXPLAYERS}\
@@ -35,7 +38,10 @@ OPTIONS="-game ${GAME}\
  +hostname \"${SERVER_NAME}\"\
  +mp_startmoney ${START_MONEY}\
  +mp_friendlyfire ${FRIENDLY_FIRE}\
- +mp_buytime ${BUY_TIME}"
+ +mp_buytime ${BUY_TIME}\
+ +bot_qouta ${BOT_QOUTA}\
+ +bot_add ${BOR_ADD}\
+ +bot_difficulty ${BOT_DIFFICULTY}"
 
 if [ -z "${RESTART_ON_FAIL}" ]; then
     OPTIONS="${OPTIONS} -norestart"
